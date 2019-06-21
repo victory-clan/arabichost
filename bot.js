@@ -171,7 +171,6 @@ client.on('message', async function(message) {
                         guilds[message.guild.id].isPlaying = true;
                         guilds[message.guild.id].queueNames.push(video.title)
                         guilds[message.guild.id].queue.push(video.id)
-                    })
                     return message.channel.send(`[:musical_score: __${playlist.title}__] **${videos.slice(0, 100).length}** items Added to the **Queue**!\n**Playing :notes: \`\`${videos[0].title}\`\` - Now!**`)                    ;
                 }
                 message.channel.send(`${yt} **Searching :mag_right: \`\`${args}\`\` **`).then(() => {
