@@ -186,8 +186,6 @@ client.on('message', async function(message) {
                     });
                 })})
             message.reply(novc);
-        }
- 
     } else if (mess.startsWith(prefix + "skip") || mess.startsWith(prefix+"عدي")) {
         if(!message.member.voiceChannel) return message.reply(novc)
         if(message.member.hasPermission('MANAGE_CHANNELS')) {
