@@ -246,4 +246,4 @@ ${prefix}resume ⇏ لتشغيل الاغنية مرة اخرة
    }
    });
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN)
