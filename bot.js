@@ -24,13 +24,13 @@ const client = new Discord.Client({disableEveryone: true});
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-});
+   client.user.setActivity("Arab || 1play .",{type: 'LISTENING'})
 
 
 
 
 
-const prefix = "*"
+const prefix = "1"
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
@@ -218,7 +218,25 @@ function play(guild, song) {
 }
 
 
-
+client.on("message", message => {
+    if (message.content === `${prefix}help`) {
+  const embed = new Discord.RichEmbed()
+      .setColor("#000000")
+      .setDescription(`
+${prefix}play ⇏ لتشغيل أغنية برآبط أو بأسم
+${prefix}skip ⇏ لتجآوز الأغنية الحآلية
+${prefix}stop ⇏ إيقآف الأغنية مؤقتا
+${prefix}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+${prefix}vol ⇏ لتغيير درجة الصوت 100 - 0
+${prefix}leave⇏ لإخرآج البوت من الروم
+${prefix}np ⇏ لمعرفة الأغنية المشغلة حآليا
+${prefix}queue ⇏ لمعرفة قآئمة التشغيل
+${prefix}resume ⇏ لتشغيل الاغنية مرة اخرة 
+ `)
+   message.channel.sendEmbed(embed)
+   
+   }
+   });
 
 
 
