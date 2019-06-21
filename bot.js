@@ -185,7 +185,6 @@ client.on('message', async function(message) {
                         message.channel.send(`**Playing :notes: \`\`${videoInfo.title}\`\` - Now!**`);
                     });
                 })})
-        } else {
             message.reply(novc);
         }
  
