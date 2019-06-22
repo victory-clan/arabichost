@@ -300,7 +300,7 @@ client.on('message' , message => {
  .setThumbnail(client.user.avatarURL)
  .setAuthor(message.author.username, message.author.avatarURL)
  .setTitle('Click here to be redirected to Sarcasm System.')//رسالة
- .setURL('https://discordapp.com/oauth2/authorize?client_id=591480680807137301&permissions=8&scope=bot')//حط رابط اضافة البوت
+ .setURL('https://discordapp.com/oauth2/authorize?client_id=591480531414155265&permissions=8&scope=bot')//حط رابط اضافة البوت
   message.channel.sendEmbed(embed);
 
    }
